@@ -6,6 +6,6 @@ jobs:
     steps:
       - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา
       - uses: snow-actions/line-notify@v1.0.0
-       with:
-        access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
-        message: Pang ส่งงานแล้ว
+        with:
+          access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
+          message: Pang ส่งงานแล้ว
