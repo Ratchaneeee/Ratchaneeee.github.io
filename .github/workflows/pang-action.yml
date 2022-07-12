@@ -12,7 +12,7 @@ jobs:
 
   Second-Job: #! ชื่อ job
     runs-on: ubuntu-latest #! os ที่ใช้งาน
-    needs: Second-Job
+    needs: First-Job
     steps:
       - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
       - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
@@ -22,7 +22,7 @@ jobs:
 
   Third-Job: #! ชื่อ job
     runs-on: ubuntu-latest #! os ที่ใช้งาน
-    needs: Third-Job
+    needs: Second-Job
     steps:
       - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
       - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
@@ -32,7 +32,7 @@ jobs:
 
   Fourth-Job: #! ชื่อ job
     runs-on: ubuntu-latest #! os ที่ใช้งาน
-    needs: Fourth-Job
+    needs: Third-Job
     steps:
       - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
       - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
@@ -42,7 +42,7 @@ jobs:
 
   Fifth-Job: #! ชื่อ job
     runs-on: ubuntu-latest #! os ที่ใช้งาน
-    needs: Fifth-Job
+    needs: Fourth-Job
     steps:
       - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
       - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
