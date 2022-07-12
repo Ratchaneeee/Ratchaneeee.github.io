@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { Forif } from './components/Forif';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* <Forif /> */}
     </div>
   );
 }

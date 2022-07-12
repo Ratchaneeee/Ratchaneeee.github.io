@@ -1,0 +1,7 @@
+@url = https://notify-api.line.me/api/notify
+
+POST {{url}}
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
+
+message=Hello Pang
