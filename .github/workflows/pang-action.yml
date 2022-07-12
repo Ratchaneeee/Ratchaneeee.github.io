@@ -1,11 +1,55 @@
 name: GitHub Actions Demo #! ชื่อ โครงการ
 on: [push]
 jobs:
-  Explore-GitHub-Actions: #! ชื่อ job
+  First-Job: #! ชื่อ job
     runs-on: ubuntu-latest #! os ที่ใช้งาน
+    needs: First-Job #! การตั้งค่าการทำงานเป็น step
     steps:
-      - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา
-      - uses: snow-actions/line-notify@v1.0.0
-        with:
+      - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
+      - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
+        with: #!ตัวแปรที่ต้องส่งไปกับ lib
           access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
-          message: Pang ส่งงานแล้ว
+          message: 🎉 Pang ตื่นนอน
+
+ Second-Job: #! ชื่อ job
+    runs-on: ubuntu-latest #! os ที่ใช้งาน
+    needs: Second-Job 
+    steps:
+      - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
+      - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
+        with: #!ตัวแปรที่ต้องส่งไปกับ lib
+          access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
+          message: 🎉 Pang แป้งทำกิตจะวัตในห้องน้ำ
+
+ Third-Job: #! ชื่อ job
+    runs-on: ubuntu-latest #! os ที่ใช้งาน
+    needs: Third-Job 
+    steps:
+      - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
+      - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
+        with: #!ตัวแปรที่ต้องส่งไปกับ lib
+          access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
+          message: 🎉 Pang แป้งแต่งตัว
+
+Fourth-Job: #! ชื่อ job
+    runs-on: ubuntu-latest #! os ที่ใช้งาน
+    needs: Fourth-Job 
+    steps:
+      - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
+      - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
+        with: #!ตัวแปรที่ต้องส่งไปกับ lib
+          access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
+          message: 🎉 Pang แป้งขับรถมาทำงาน
+
+Fifth-Job: #! ชื่อ job
+    runs-on: ubuntu-latest #! os ที่ใช้งาน
+    needs: Fifth-Job 
+    steps:
+      - run: echo "🎉 Hello Pang" #! รันคำสั่ง ubuntu ให้ echo ออกมา และเป็นคำสั่งใน os
+      - uses: snow-actions/line-notify@v1.0.0 #!uses คือการใช้ lib
+        with: #!ตัวแปรที่ต้องส่งไปกับ lib
+          access_token: sbgUpn2UGSCWs81res3LO3urNXdrCATNmndhuxjboat
+          message: 🎉 Pang แป้งมาถึงที่ทำงานและเริ่มทำงาน
+
+          
+          
